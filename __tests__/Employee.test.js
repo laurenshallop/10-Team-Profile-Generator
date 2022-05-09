@@ -2,7 +2,7 @@ const Employee = require('../lib/Employee');
 
 test('create an employee object', () => {
     const employee = new Employee();
-    expect(typeof(employee)).toBe('object');
+    expect(typeof(employee)).toEqual('object');
 });
 
 test('get employee name', () => {
@@ -17,9 +17,9 @@ test('get employee id', () => {
 
 test('get employee email', () => {
     const employee = new Employee('Madison', 222, 'madi@gmail.com');
-    expect(employee.email).toEqual('madi@gmail');
+    expect(employee.email).toEqual('madi@gmail.com');
 });
 
 test('get employee role', () => {
-    expect(employee.role).toEqual('Employee')
+    expect(employee.role).toEqual('employee')
 });

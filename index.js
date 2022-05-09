@@ -4,7 +4,7 @@ const generateHTML = require('./src/generateHTML');
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const Employee = require('./lib/Employee');
+//const Employee = require('./lib/Employee');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
@@ -127,7 +127,7 @@ const addEngineer = () => {
             name:'email',
             message: 'Enter engineer email',
             validate: emailAddressInput => {
-                if (employeeIdInput) {
+                if (emailAddressInput) {
                     return true;
                 } else {
                     console.log('Enter engineer email');
@@ -216,18 +216,18 @@ const addIntern = () => {
     });
 };
 
+const writeFile = (filename, data) => {
+    fs.writeFile(filename, data, (err) => {
+        if (err) 
+        throw (err);
+    });
+};
+
 const createTeam = (teamArray) => {
     writeFile('./dist/index.html', generateHTML(teamArray));
     console.log(`Your team profile has been created`);
     };
   });
-
-  const writeFile = (filename, data) => {
-      fs.writeFile(filename, data, (err) => {
-          if (err) 
-          throw (err);
-      });
-  };
-
-  addManager();
 }
+  addManager();
+
