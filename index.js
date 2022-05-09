@@ -15,7 +15,7 @@ const addManager = () => {
     return inquirer.prompt([
         {
             type: 'input', 
-            name:'id', 
+            name:'name', 
             Message: 'Managers Name',
             validate: nameInput => {
                 if (nameInput) {
@@ -61,7 +61,7 @@ const addManager = () => {
             }
     }
 },
-    ]).then(function(managerInput) {
+    ]).then(managerInput => {
         const {name, id, email, officeNum} = managerInput;
         const manager = new Manager(name, id, email, officeNum);
 
