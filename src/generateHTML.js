@@ -7,7 +7,7 @@ const generateHTML = (teamArray) => {
           <h5 class="card-title">${teamArray[i].role}</h5>
           <h6 class="card-subtitle mb-2 text-muted">${teamArray[i].name}</h6>
           <p class="card-text">ID: ${teamArray[i].id}</p>
-          <p class="card-text">Email: <a href="mailto:${teamArray[i].email}" class="card-link">${teamArr[i].email}</a></p>
+          <p class="card-text">Email: <a href="mailto:${teamArray[i].email}" class="card-link">${teamArray[i].email}</a></p>
          `
 
          if (teamArray[i].officeNumber){
@@ -18,7 +18,7 @@ const generateHTML = (teamArray) => {
 
          if (teamArray[i].github) {
              object +=`
-             <a href="https://github.com/${teamArray[i].github}" target=_blank class ="card-link"> Github: ${teamArr[i].github}</a><br>
+             <a href="https://github.com/${teamArray[i].github}" target=_blank class ="card-link"> Github: ${teamArray[i].github}</a><br>
              `
          }
 

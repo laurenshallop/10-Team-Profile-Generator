@@ -67,8 +67,12 @@ const addManager = () => {
 
         teamArray.push(manager);
         console.log(teamArray);
-        addTeamMember = () => {
-            inquirer.prompt([
+        addTeamMember();
+
+    })
+};
+     const addTeamMember = () => {
+            return inquirer.prompt([
                 {
                     type: 'list',
                     name: 'addTeamMember',
@@ -227,7 +231,11 @@ const createTeam = (teamArray) => {
     writeFile('./dist/index.html', generateHTML(teamArray));
     console.log(`Your team profile has been created`);
     };
-  });
-}
+  //});
+//}
   addManager();
+
+  //addEngineer();
+  //addIntern();
+  
 
